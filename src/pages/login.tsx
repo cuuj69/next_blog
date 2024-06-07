@@ -3,36 +3,36 @@ import { useRouter } from "next/router";
 const Login = () => {
   const router = useRouter();
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md mx-auto">
-        <h1 className="text-3xl font-bold mb-4 text-center">Login</h1>
-        <form className="space-y-4">
+    <div className="flex items-center justify-center min-h-screen ">
+      <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-sm">
+        <h1 className="text-2xl font-semibold mb-4 text-center text-gray-800">Login</h1>
+        <form className="space-y-3">
           <label className="block">
-            Email:
+            <span className="text-gray-700">Email</span>
             <input
               type="email"
               name="email"
-              className="border p-2 w-full mt-1 rounded-md"
+              className="border border-gray-300 p-2 w-full mt-1 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
             />
           </label>
           <label className="block">
-            Password:
+            <span className="text-gray-700">Password</span>
             <input
               type="password"
               name="password"
-              className="border p-2 w-full mt-1 rounded-md"
+              className="border border-gray-300 p-2 w-full mt-1 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
             />
           </label>
           <button
             type="submit"
-            className="mt-4 p-2 bg-blue-500 text-white w-full rounded-md"
+            className="mt-3 p-2 bg-purple-600 text-white w-full rounded-md hover:bg-purple-700 transition-colors duration-200"
           >
             Login
           </button>
         </form>
         <button
           onClick={() => router.back()}
-          className="mt-4 p-2 bg-gray-300 text-black w-full rounded"
+          className="mt-3 p-2 bg-gray-300 text-black w-full rounded-md hover:bg-gray-400 transition-colors duration-200"
         >
           Back
         </button>
