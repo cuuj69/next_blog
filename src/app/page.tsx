@@ -1,19 +1,23 @@
-// next_blog/src/app/page.tsx
 import Link from "next/link";
 
-export default function Home() {
+const HomePage = () => {
   return (
-    <div className="flex-grow flex flex-col items-center justify-center p-24 bg-gray-100 rounded-md">
-      <h1 className="text-3xl font-bold mb-8">Welcome to Our Blog Platform</h1>
-      <p className="text-lg mb-8 text-center">Your go-to place for the latest blog posts and articles.</p>
-      <div className="flex flex-col space-y-4">
-        <Link href="/login" className="px-6 py-3 bg-pink-500 text-white font-bold rounded-lg hover:bg-blue-600 transition duration-300">
-          Login
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
+      <h1 className="text-4xl font-bold text-gray-800 mb-6">Welcome to Founders Journal</h1>
+      <div className="space-x-4">
+        <Link href="/login" legacyBehavior>
+          <a className="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors duration-200">
+            Log In
+          </a>
         </Link>
-        <Link href="/signup" className="px-4 py-2 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition duration-300">
-          Sign Up
+        <Link href="/signup" legacyBehavior>
+          <a className="px-4 py-2 bg-pink-400 text-white rounded-md hover:bg-indigo-700 transition-colors duration-200">
+            Sign Up
+          </a>
         </Link>
       </div>
     </div>
   );
-}
+};
+
+export default HomePage;
